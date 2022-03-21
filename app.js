@@ -5,9 +5,6 @@ const port = 3030;
 
 app.use(express.static(path.join(__dirname, "public")));
 
-app.listen(port, () => {
-    console.log(`servidor corriendo en el puerto http://localhost:${port}`)
-});
 
 app.get("/", (req,res) => {
     return res.sendFile(path.join(__dirname, "views/index.html"))
@@ -41,3 +38,6 @@ app.get("/turing", (req,res) => {
     return res.sendFile(path.join(__dirname, "views/turing.html"))
 });
 
+app.listen(port, () => {
+    console.log(`servidor corriendo en el puerto http://localhost:${port}`)
+});
